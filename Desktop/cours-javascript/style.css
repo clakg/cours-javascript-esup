@@ -1,3 +1,41 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+}
+
 body {
-    background: red;
+    background: pink;
+    color: grey;
+    margin: 0;
+    min-height: 200vh;
+    text-align: center;
+}
+
+.box {
+    border: 6px solid white;
+    transition: 0.25s ease;
+    background: black;
+    padding: 10px;
+}
+
+p {
+    opacity: 0;
+    margin: 10px auto 0;
+    transform: translate(-200px);
+    transition: 0.6s;
+    visibility: hidden;
+    width: 240px;
+}
+
+.questionOnClick {
+    background: #615661;
+    border-radius: 30px;
+    border: 6px dashed red;
+}
+
+.showResponse {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
 }
