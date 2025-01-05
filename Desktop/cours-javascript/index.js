@@ -69,3 +69,19 @@ btn2.addEventListener("click", () => {
     response.style.background = "red";
 })
 
+
+//------------------------------------------------------
+// 8 - EVENT MOUSE MOVE
+
+const mouseMove = document.querySelector(".onMouseMove");
+//console.log("log de la variable mouseMove");
+
+// e => données de l'événement qu'on logge
+window.addEventListener("mousemove", (e) => {
+    console.log("log de la variable mouseMove 2");
+    // console.log(e);
+    // console.log(e.target);
+    mouseMove.style.left = e.pageX + "px";
+    mouseMove.style.top = e.pageY + "px";
+})
+
