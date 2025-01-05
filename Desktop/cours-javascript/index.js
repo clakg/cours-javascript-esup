@@ -95,9 +95,17 @@ window.addEventListener("mouseup", () => {
 })
 
 questionContainer.addEventListener("mouseenter", () => {
-    questionContainer.style.background = "rgba(0,0,0,0.6)"
+    questionContainer.style.background = "rgba(0,0,0,0.6)";
 })
 
 questionContainer.addEventListener("mouseout", () => {
-    questionContainer.style.background = "black"
+    questionContainer.style.background = "black";
+})
+
+response.addEventListener("mouseover", () => {
+    response.style.transform = "scale(2)";
+})
+
+response.addEventListener("mouseleave", () => {
+    response.style.transform = "scale(1)";
 })
