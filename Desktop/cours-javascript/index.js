@@ -94,3 +94,10 @@ window.addEventListener("mouseup", () => {
     mouseMove.style.border = "2px solid black";
 })
 
+questionContainer.addEventListener("mouseenter", () => {
+    questionContainer.style.background = "rgba(0,0,0,0.6)"
+})
+
+questionContainer.addEventListener("mouseout", () => {
+    questionContainer.style.background = "black"
+})
