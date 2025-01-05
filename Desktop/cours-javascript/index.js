@@ -109,3 +109,24 @@ response.addEventListener("mouseover", () => {
 response.addEventListener("mouseleave", () => {
     response.style.transform = "scale(1)";
 })
+
+//------------------------------------------------------
+// 9 - KEY PRESS EVENT
+
+const keyPressContainer = document.querySelector(".onKeyPress");
+const keyPressSpan = document.getElementById("onKeyPressSpan");
+
+document.addEventListener("keypress", (e) => {
+    //console.log(e);
+    //console.log(e.key);
+    keyPressSpan.textContent = e.key;
+
+    if (e.key === "a") {
+        keyPressContainer.style.background = "green"
+    } else if (e.key === "z") {
+        keyPressContainer.style.background = "pink"
+    } else {
+        keyPressContainer.style.background = "blue"
+    }
+})
+
