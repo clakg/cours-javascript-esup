@@ -10,6 +10,7 @@ body {
     margin: 0;
     min-height: 200vh;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .box {

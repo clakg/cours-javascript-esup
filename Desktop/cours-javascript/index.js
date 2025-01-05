@@ -85,3 +85,12 @@ window.addEventListener("mousemove", (e) => {
     mouseMove.style.top = e.pageY + "px";
 })
 
+window.addEventListener("mousedown", () => {
+    mouseMove.style.transform = "scale(2) translate(-25%, -25%)";
+})
+
+window.addEventListener("mouseup", () => {
+    mouseMove.style.transform = "scale(1) translate(-50%, -50%)";
+    mouseMove.style.border = "2px solid black";
+})
+
