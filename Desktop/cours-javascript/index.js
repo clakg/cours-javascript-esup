@@ -130,3 +130,23 @@ document.addEventListener("keypress", (e) => {
     }
 })
 
+// ------------------------------------------------------
+// 10 - SCROLL EVENT
+
+// on peut laisser la navbar apparente mais on va la faire apparaitre quand on aura scrollé un minimum de pixel
+
+const nav = document.querySelector("nav");
+const box1 = document.querySelector(".box1")
+
+window.addEventListener("scroll", () => {
+    //console.log("test");
+    console.log(window.scrollY);
+
+    if (window.scrollY > 120) {
+        nav.style.top = "-50px"
+        box1.style.marginTop = "0px"
+    } else {
+        nav.style.top = "0px"
+        box1.style.marginTop = "50px"
+    }
+})
