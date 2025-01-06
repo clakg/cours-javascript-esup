@@ -195,3 +195,11 @@ form.addEventListener("submit", (e) => {
         alert("Veuillez cocher et accepter les RGPD")
     }
 })
+
+// ------------------------------------------------------
+// 12 - LOAD EVENT
+
+window.addEventListener("load", () => {
+    console.log("Document chargé");
+    alert("Document chargé !!!")
+})
