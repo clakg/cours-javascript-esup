@@ -150,3 +150,48 @@ window.addEventListener("scroll", () => {
         box1.style.marginTop = "50px"
     }
 })
+
+// ------------------------------------------------------
+// 11 - FORM EVENT
+
+// event sur un input
+
+const inputName = document.querySelector('input[type="text"]');
+const inputSelect = document.querySelector("select");
+const form = document.querySelector("form")
+let typedText = "";
+let townSelect = ""
+
+inputName.addEventListener("input", (e) => {
+    // console.log("test");
+    // console.log(e.target.value);
+    typedText = e.target.value;
+    //console.log(typedText);
+})
+
+inputSelect.addEventListener("input", (e) => {
+    // console.log("test select");
+    //console.log(e.target.value);
+    townSelect = e.target.value;
+    //console.log(townSelect);
+})
+
+form.addEventListener("submit", (e) => {
+    // si on n'ajotue pas e.preventDefault(), on recharge la page et rien ne sera sauvegardé
+    e.preventDefault()
+    console.log("test submit");
+
+    // si le checkbox n'est pas coché, le formulaire ne se valide pas
+    console.log(RGPD.checked);
+
+    if (RGPD.checked) {
+        // si checked, on met le contenu du formulaire
+        document.querySelector("form > div").innerHTML = `
+        <h4>Ville écrite : ${typedText}</h4>
+        <h4>Ville sélectionnée : ${townSelect}</h4>
+        `
+    } else {
+        // sinon, alert
+        alert("Veuillez cocher et accepter les RGPD")
+    }
+})
