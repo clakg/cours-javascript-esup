@@ -203,3 +203,11 @@ window.addEventListener("load", () => {
     console.log("Document chargé");
     alert("Document chargé !!!")
 })
+
+// ------------------------------------------------------
+// 13 - STOP PROPAGATION
+
+questionContainer.addEventListener("click", () => {
+    alert("test stop propagation");
+    e.stopPropagation();
+})
